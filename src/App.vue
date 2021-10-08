@@ -4,16 +4,18 @@
     <main>
       <router-view/>
     </main>
+    <footer-block></footer-block>
   </div>
 </template>
 
 
 <script>
   import HeaderBlock from './components/HeaderBlock.vue'
+  import FooterBlock from './components/FooterBlock.vue'
 
   export default {
     components: {
-      HeaderBlock
+      HeaderBlock, FooterBlock
     }
   }
 </script>
