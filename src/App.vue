@@ -1,32 +1,120 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header-block></header-block>
+    <main>
+      <router-view/>
+    </main>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
+<script>
+  import HeaderBlock from './components/HeaderBlock.vue'
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  export default {
+    components: {
+      HeaderBlock
     }
   }
-}
+</script>
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  html, body {
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    height: 100%;
+    background: #fff;
+    color: #2B3452;
+  }
+
+  body {
+    position: relative;
+  }
+
+  html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+  }
+
+  @-ms-viewport {
+    width: device-width;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  button {
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  h1, h2, h3, h4, h5, p {
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  sup {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
+  }
+
+  picture {
+    display: block;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .container {
+    max-width: 1392+60px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+
+  @media (max-width: 575.98px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .section-title {
+      font-size: 42px;
+    }
+  }
 </style>
