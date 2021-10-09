@@ -21,17 +21,14 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
   html, body {
     min-width: 320px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
     margin: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    line-height: 1.2;
     height: 100%;
     background: #fff;
     color: #2B3452;
@@ -109,7 +106,7 @@
   }
 
   #app {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -117,6 +114,15 @@
   main {
     flex-grow: 1;
     padding: 144px 0 164px;
+  }
+
+  @keyframes fadeIn {
+      0% {
+          opacity : 0;
+      }
+      100% {
+          opacity : 1;
+      }
   }
 
   @media (max-width: 575.98px) {

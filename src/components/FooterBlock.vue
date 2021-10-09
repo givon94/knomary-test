@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer__block">
             <div class="footer__logo">
-                <img-logo></img-logo>
+                <title-logo></title-logo>
             </div>
             <a class="footer__btn" href="#">Нужна помощь?</a>
         </div>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-    import ImgLogo from './ImgLogo.vue'
+    import TitleLogo from './TitileLogo.vue'
 
     export default {
-        components: { ImgLogo }
+        components: { TitleLogo }
     }
 </script>
 

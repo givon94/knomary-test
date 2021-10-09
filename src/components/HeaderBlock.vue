@@ -2,7 +2,7 @@
     <header class="header">
         <div class="header__block">
             <div class="header__logo">
-                <img-logo></img-logo>
+                <title-logo></title-logo>
             </div>
             <nav class="header__nav">
                 <div class="header__nav-lists-wrapper">
@@ -28,10 +28,10 @@
 </template>
 
 <script>
-    import ImgLogo from './ImgLogo.vue'
+    import TitleLogo from './TitileLogo.vue'
 
     export default {
-        components: { ImgLogo },
+        components: { TitleLogo },
         data() {
             return {
                 links: [
@@ -63,7 +63,7 @@
             align-items: center;
         }
         &__nav {
-            margin: 0 auto 0 40px;
+            margin: 0 auto 0 41px;
             &-lists {
                 display: flex;
                 align-items: center;
@@ -107,6 +107,7 @@
         &__person {
             display: flex;
             align-items: center;
+            margin-right: 9px;
             &-img {
                 flex: none;
                 border-radius: 10px;

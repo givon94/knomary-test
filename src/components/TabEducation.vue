@@ -20,7 +20,10 @@
 <style lang="scss">
     .education {
         &__tab {
-            margin-right: 13px;
+            margin-right: 8px;
+            &:first-child {
+                margin-right: 16px;
+            }
             &-link {
                 display: flex;
                 align-items: center;
@@ -29,6 +32,10 @@
                 color: #7D8395;
                 border-radius: 40px;
                 padding: 8px 16px;
+                &:hover {
+                    background: lighten(#6699FD, 10%);
+                    color: #fff;
+                }
                 &--active {
                     background: #6699FD;
                     color: #fff;
@@ -39,12 +46,14 @@
                 &-title {
                     font-family: 'Roboto', sans-serif;
                     font-size: 18px;
-                    line-height: 21px;
+                    line-height: 20px;
+                    letter-spacing: 0.0025em;
                 }
                 &-count {
                     font-size: 12px;
                     font-weight: 300;
                     line-height: 15px;
+                    letter-spacing: 0.0025em;
                     padding: 0 3px;
                     color: #2B3452;
                     background: #FDF41F;

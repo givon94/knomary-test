@@ -6,7 +6,7 @@
                 <span class="education__descr-type-name">{{ itemType }}</span>
                 <span class="education__descr-type-status">{{ itemProgressVal }}</span>
             </div>
-            <div class="education__descr-progress" v-if="itemProgress >= 0">
+            <div class="education__descr-progress" v-if="itemProgress != null">
                 <div class="education__descr-progress-line" :style="{'width': itemProgress + '%'}"></div>
             </div>
             <h4 class="education__descr-title">{{ itemName }}</h4>
@@ -22,7 +22,7 @@
 
 <script>
     export default {
-        props: ['itemImg', 'itemName', 'itemProgress', 'itemProgressVal', 'itemDate']
+        props: ['itemImg', 'itemName', 'itemType', 'itemProgress', 'itemProgressVal', 'itemDate']
     }
 </script>
 
@@ -31,19 +31,21 @@
         &__item {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: calc(25% - 24px);
             max-width: 330px;
             overflow: hidden;
             background: #fff;
             border-radius: 9px;
             cursor: pointer;
             margin: 12px;
+            animation: fadeIn .5s ease-in-out;
             &:hover {
                 & .education__descr-title {
                     color: #6699FD;
                 }
             }
             &-img {
+                flex: none;
                 width: 330px;
                 height: 200px;
                 object-fit: cover;
@@ -75,7 +77,7 @@
                 height: 4px;
                 background: #DBDEE5;
                 border-radius: 10px;
-                margin-bottom: 16px;
+                margin-bottom: 17px;
                 &-line {
                     position: absolute;
                     left: 0;
@@ -99,15 +101,18 @@
                 font-weight: 600;
                 font-size: 18px;
                 line-height: 26px;
-                margin-bottom: 16px;
+                margin-bottom: 14px;
             }
             &-date {
+                display: flex;
+                align-items: center;
                 margin-top: auto;
+                padding-left: 2px;
                 &-text {
                     font-size: 14px;
                     line-height: 18px;
                     color: #7D8395;
-                    margin-left: 8px;
+                    margin-left: 9px;
                 }
             }
         }
