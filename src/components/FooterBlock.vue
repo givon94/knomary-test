@@ -1,21 +1,15 @@
 <template>
     <footer class="footer">
         <div class="footer__block">
-            <div class="footer__logo">
-                <title-logo></title-logo>
+            <div class="logo footer__logo">
+                <p class="logo__title footer__logo-title">Knomary</p>
+                <span class="logo__subtitle footer__logo-subtitle">TEST</span>
             </div>
             <a class="footer__btn" href="#">Нужна помощь?</a>
         </div>
     </footer>
 </template>
 
-<script>
-    import TitleLogo from './TitileLogo.vue'
-
-    export default {
-        components: { TitleLogo }
-    }
-</script>
 
 <style lang="scss">
     .footer {
@@ -25,6 +19,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         &__btn {
             font-family: 'Roboto', sans-serif;
@@ -37,6 +32,18 @@
             border-radius: 6px;
             padding: 15px 21px;
             color: #6699FD;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .footer {
+            &__block {
+                flex-direction: column;
+                justify-content: center;
+            }
+            &__btn {
+                margin-top: 15px;
+            }
         }
     }
 </style>

@@ -117,4 +117,36 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        .education {
+            &__item {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .education {
+            &__item {
+                width: calc(50% - 24px);
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .education {
+            &__item {
+                width: calc(33.333% - 24px);
+            }
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .education {
+            &__item {
+                width: calc(33.333% - 24px);
+            }
+        }
+    }
 </style>

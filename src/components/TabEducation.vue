@@ -20,7 +20,7 @@
 <style lang="scss">
     .education {
         &__tab {
-            margin-right: 8px;
+            margin: 8px;
             &:first-child {
                 margin-right: 16px;
             }
@@ -60,6 +60,14 @@
                     border-radius: 4px;
                     margin-left: 8px;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .education {
+            &__tab {
+                margin: 8px !important;
             }
         }
     }

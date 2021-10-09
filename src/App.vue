@@ -116,6 +116,27 @@
     padding: 144px 0 164px;
   }
 
+  .logo {
+    flex: none;
+    display: flex;
+    align-items: center;
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-left: 8px;
+      color: #fff;
+      padding: 3px 4px;
+      background: #6699FD;
+      border-radius: 4px;
+    }
+  }
+
   @keyframes fadeIn {
       0% {
           opacity : 0;
@@ -132,7 +153,7 @@
     }
 
     .section-title {
-      font-size: 42px;
+      text-align: center;
     }
   }
 </style>

@@ -44,6 +44,12 @@
             max-width: 448px;
             margin: 12px;
             animation: fadeIn .5s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                & .news__descr-title {
+                    color: #6699FD;
+                }
+            }
             &-top {
                 position: relative;
                 margin-bottom: 16px;
@@ -110,6 +116,30 @@
                     color: #7D8395;
                     margin-left: 10px;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .news {
+            &__item {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .news {
+            &__item {
+                width: calc(50% - 24px);
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .news {
+            &__item {
+                width: calc(50% - 24px);
             }
         }
     }

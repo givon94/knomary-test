@@ -3,17 +3,19 @@
         <section class="education">
             <div class="container">
                 <h2 class="section-title education__title">Назначенное обучение</h2>
-                <ul class="education__tabs">
-                    <tab-education
-                            v-for="(tab, index) in educationTabs"
-                            :key="index"
-                            :tabCategory="category"
-                            :tabUrl="tab.url"
-                            :tabTitle="educationType(tab.title, true)"
-                            :tabLength="tab.length"
-                            @show="category = tab.url"
-                    ></tab-education>
-                </ul>
+                <div class="education__tabs-wrapper">
+                    <ul class="education__tabs">
+                        <tab-education
+                                v-for="(tab, index) in educationTabs"
+                                :key="index"
+                                :tabCategory="category"
+                                :tabUrl="tab.url"
+                                :tabTitle="educationType(tab.title, true)"
+                                :tabLength="tab.length"
+                                @show="category = tab.url"
+                        ></tab-education>
+                    </ul>
+                </div>
 
                 <div class="education__items">
                     <item-education
@@ -135,7 +137,11 @@
         }
         &__tabs {
             display: flex;
-            margin-bottom: 24px;
+            flex-wrap: wrap;
+            margin: -8px;
+            &-wrapper {
+                margin-bottom: 24px;
+            }
         }
         &__items {
             display: flex;
@@ -157,6 +163,17 @@
             align-items: stretch;
             flex-wrap: wrap;
             margin: -12px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .education {
+            &__tabs {
+                justify-content: center;
+            }
+            &__items {
+                justify-content: center;
+            }
         }
     }
 </style>
