@@ -108,6 +108,16 @@
     line-height: 44px;
   }
 
+  #app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 144px 0 164px;
+  }
 
   @media (max-width: 575.98px) {
     .container {

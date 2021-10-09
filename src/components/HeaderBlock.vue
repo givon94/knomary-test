@@ -36,11 +36,11 @@
             return {
                 links: [
                     { title: 'Курсы', url: '/courses' },
-                    { title: 'Тестирования', url: '#' },
-                    { title: 'События', url: '#' },
-                    { title: 'База знаний', url: '#', disabled: true },
-                    { title: 'Пользователи', url: '#', disabled: true },
-                    { title: 'Отчеты', url: '#', disabled: true },
+                    { title: 'Тестирования', url: '/testing' },
+                    { title: 'События', url: '/events' },
+                    { title: 'База знаний', url: '/knowledge-base', disabled: true },
+                    { title: 'Пользователи', url: '/users', disabled: true },
+                    { title: 'Отчеты', url: '/reports', disabled: true },
                 ]
             }
         }

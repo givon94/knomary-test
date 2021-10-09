@@ -14,6 +14,14 @@ const routes = [
     name: 'Courses',
     component: () => import('../views/Courses.vue'),
   },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('../views/NotFound.vue'),
+  }, {
+    path: '*',
+    redirect: '/404'
+  }
 ]
 
 const router = new VueRouter({
